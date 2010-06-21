@@ -139,7 +139,7 @@
          (left-assoc "=" "*=" "/=" "+=" "-=" "<<=" ">>=" ">>>=" "&=" "|=" "^=")
          (lett-assoc "<|" "<+" "<-")
          (prefix "spawn" "bind" "@")
-         (left-assoc "with")))
+         (left-assoc "with" "as")))
 
 ;; keywords followed by non-type expressions in parens
 (c-lang-defconst c-paren-nontype-kwds
