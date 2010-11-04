@@ -64,11 +64,13 @@
          "u8" "u16" "u32" "u64"))
 
 (c-lang-defconst c-type-modifier-kwds
-  rust '("io" "state" "unsafe"))
+  rust '("abs"
+         "state" "gc"
+         "impure" "unsafe"))
 
 ;; declarator-block openings
 (c-lang-defconst c-other-block-decl-kwds
-  rust '("mod" "fn" "iter" "obj"))
+  rust '("mod" "fn" "iter" "obj" "tag"))
 
 ;; type-defining declarators
 (c-lang-defconst c-typedef-decl-kwds
