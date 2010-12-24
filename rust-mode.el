@@ -154,9 +154,6 @@
 (c-lang-defconst c-stmt-delim-chars-with-comma
   rust ";{}")
 
-(c-lang-defconst c-block-comment-starter rust nil)
-(c-lang-defconst c-block-comment-ender rust nil)
-
 ;; No cpp in rust, but there are marked syntax blocks "#foo{...}"
 (c-lang-defconst c-cpp-matchers
   rust (cons
