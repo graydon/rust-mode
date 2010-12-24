@@ -66,7 +66,8 @@
 (c-lang-defconst c-type-modifier-kwds
   rust '("abs"
          "state" "gc"
-         "impure" "unsafe"))
+         "impure" "unsafe"
+         "const"))
 
 ;; declarator-block openings
 (c-lang-defconst c-other-block-decl-kwds
