@@ -66,7 +66,8 @@
 (c-lang-defconst c-type-modifier-kwds
   rust '("abs"
          "state" "gc"
-         "impure" "unsafe"))
+         "impure" "unsafe"
+         "const"))
 
 ;; declarator-block openings
 (c-lang-defconst c-other-block-decl-kwds
@@ -118,6 +119,18 @@
 (c-lang-defconst c-label-kwds
   rust nil)
 
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-type-prefix-kwds
+  rust nil)
+
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-type-list-kwds
+  rust nil)
+
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-class-decl-kwds
+  rust nil)
+
 ;; constants
 (c-lang-defconst c-constant-kwds
   rust '("true" "false"))
@@ -140,7 +153,7 @@
          (left-assoc ",")
          (left-assoc "=" "*=" "/=" "+=" "-=" "<<=" ">>=" ">>>=" "&=" "|=" "^=")
          (lett-assoc "<|" "<+" "<-")
-         (prefix "spawn" "bind" "@")
+         (prefix "spawn" "thread" "bind" "@")
          (left-assoc "with" "as")))
 
 ;; keywords followed by non-type expressions in parens
