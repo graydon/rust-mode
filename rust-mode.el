@@ -119,6 +119,18 @@
 (c-lang-defconst c-label-kwds
   rust nil)
 
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-type-prefix-kwds
+  rust nil)
+
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-type-list-kwds
+  rust nil)
+
+;; don't highlight "struct", "union", "enum" as in C
+(c-lang-defconst c-class-decl-kwds
+  rust nil)
+
 ;; constants
 (c-lang-defconst c-constant-kwds
   rust '("true" "false"))
