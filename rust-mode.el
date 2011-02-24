@@ -63,6 +63,14 @@
          "i8" "i16" "i32" "i64"
          "u8" "u16" "u32" "u64"))
 
+;; rust has no prefixes for primitives
+(c-lang-defconst c-primitive-type-prefix-kwds
+  rust nil)
+
+;; rust has no bitfields
+(c-lang-defconst c-bitfield-kwds
+  rust nil)
+
 (c-lang-defconst c-type-modifier-kwds
   rust '("abs"
          "state" "gc"
