@@ -71,7 +71,7 @@
 
 ;; declarator-block openings
 (c-lang-defconst c-other-block-decl-kwds
-  rust '("mod" "fn" "iter" "obj" "tag"))
+  rust '("mod" "fn" "iter" "tag"))
 
 ;; type-defining declarators
 (c-lang-defconst c-typedef-decl-kwds
@@ -129,7 +129,7 @@
 
 ;; don't highlight "struct", "union", "enum" as in C
 (c-lang-defconst c-class-decl-kwds
-  rust nil)
+  rust '("obj"))
 
 ;; constants
 (c-lang-defconst c-constant-kwds
