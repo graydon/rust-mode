@@ -179,18 +179,13 @@
 (c-lang-defconst c-stmt-delim-chars-with-comma
   rust ";{}")
 
-;; No cpp in rust, but there are marked syntax blocks "#foo{...}"
-(c-lang-defconst c-cpp-matchers
-  rust (cons
-      ;; Use the eval form for `font-lock-keywords' to be able to use
-      ;; the `c-preprocessor-face-name' variable that maps to a
-      ;; suitable face depending on the (X)Emacs version.
-      '(eval . (list "^\\s *\\(#\\)\\>\\(.*\\)"
-             (list 1 c-preprocessor-face-name)
-             '(2 font-lock-string-face)))
-      ;; There are some other things in `c-cpp-matchers' besides the
-      ;; preprocessor support, so include it.
-      (c-lang-const c-cpp-matchers)))
+;; No cpp in rust. Turn as much off as possible.
+(c-lang-defconst c-cpp-matchers rust nil)
+(c-lang-defconst c-opt-cpp-symbol rust nil)
+(c-lang-defconst c-opt-cpp-prefix rust nil)
+(c-lang-defconst c-anchored-cpp-prefix rust nil)
+(c-lang-defconst c-opt-cpp-start rust nil)
+
 
 (defcustom rust-font-lock-extra-types nil
   "*List of extra types (aside from the type keywords) to recognize in
