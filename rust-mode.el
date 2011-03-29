@@ -139,6 +139,10 @@
 (c-lang-defconst c-class-decl-kwds
   rust '("obj"))
 
+;; don't highlight "extern"
+(c-lang-defconst c-nonsymbol-sexp-kwds
+ rust nil)
+
 ;; constants
 (c-lang-defconst c-constant-kwds
   rust '("true" "false"))
