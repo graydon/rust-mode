@@ -59,7 +59,7 @@
          "task" "mod" "obj"
          "fn" "iter"
          "any"
-         "bool" "int" "uint" "big"
+         "bool" "int" "uint" "float" "big"
          "i8" "i16" "i32" "i64"
          "u8" "u16" "u32" "u64"))
 
