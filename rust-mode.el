@@ -104,7 +104,7 @@
 
 ;; statement keywords you can stick substatements directly after
 (c-lang-defconst c-block-stmt-1-kwds
-  rust nil)
+  rust '("self"))
 
 ;; statement keywords you can stick bracketed substatements after
 (c-lang-defconst c-block-stmt-2-kwds
