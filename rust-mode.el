@@ -188,6 +188,11 @@
 ;; word boundary in the middle of a word.
 (c-lang-defconst c-opt-cpp-prefix rust "a\bc")
 
+;; Make comment-region, probably other comment-related stuff use line
+;; comments instead of block comments
+(c-lang-defconst comment-start
+  rust (c-lang-const c-line-comment-starter))
+
 (defcustom rust-font-lock-extra-types nil
   "*List of extra types (aside from the type keywords) to recognize in
 rust mode.Each list item should be a regexp matching a single identifier.")
