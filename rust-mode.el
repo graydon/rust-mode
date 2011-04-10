@@ -179,13 +179,14 @@
 (c-lang-defconst c-stmt-delim-chars-with-comma
   rust ";{}")
 
-;; No cpp in rust. Turn as much off as possible.
-(c-lang-defconst c-cpp-matchers rust nil)
-(c-lang-defconst c-opt-cpp-symbol rust nil)
-(c-lang-defconst c-opt-cpp-prefix rust nil)
-(c-lang-defconst c-anchored-cpp-prefix rust nil)
-(c-lang-defconst c-opt-cpp-start rust nil)
-
+;; No c preprocessor in rust. The correct way to disable cpp-related
+;; stuff in cc-mode appears to be to set c-opt-cpp-prefix to
+;; nil. Unfortunately this causes font-lock-mode to not work
+;; correctly (highlighting is performed when the buffer is loaded, but
+;; subsequent typing isn't highlighted correctly).  As a hack, I'm
+;; defining the cpp prefix to be an impossible regex, in this case a
+;; word boundary in the middle of a word.
+(c-lang-defconst c-opt-cpp-prefix rust "a\bc")
 
 (defcustom rust-font-lock-extra-types nil
   "*List of extra types (aside from the type keywords) to recognize in
